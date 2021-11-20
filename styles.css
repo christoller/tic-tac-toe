@@ -1,0 +1,110 @@
+:root {
+    font-size: 1.2em;
+}
+* {
+    box-sizing: border-box;
+}
+
+#opening-display{
+    position: absolute;
+    z-index: 3;
+    background-color: aquamarine;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+#opening-display div{
+    margin: 10%;
+}
+#opening-display div h5 {
+    margin-bottom: 5px;
+}
+#opening-display div p {
+    font-size: 0.8em;
+    margin-top: 0;
+}
+#player-one-display {
+    background-color: aquamarine;
+    position: absolute;
+    z-index: 2;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+#player-two-display {
+    background-color: aquamarine;
+    position: absolute;
+    z-index: 1;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+header {
+    text-align: center;
+}
+header h1 {
+    margin-bottom: 1%;
+}
+header h3 {
+    margin-top: 0;
+}
+#container {
+    display: none;
+}
+#player-stats {
+    display: flex;
+    justify-content: space-between;
+}
+#cat-ref {
+    width: 200px;
+    height: auto;
+}
+#player-one-container {
+    display: inline-block;
+    margin-left: 10%;
+}
+#player-one-name {
+    margin: 10px 0 0 0;
+}
+#player-one-score{
+    margin-top: 1.5%;
+}
+#player-two-score {
+    margin-top: 1.5%;
+}
+#player-two-name {
+    margin: 10px 0 0 0;
+}
+#player-two-container {
+    display: inline-block;
+    margin-right: 10%;
+    
+}
+#game-flow {
+    text-align: center;
+}
+#game-container {
+    width: 600px;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin: 0 auto;
+}
+#game-container{
+    border: 3px solid black;
+}
+.grid-box {
+    width: 198px;
+    height: 198px;
+    border: 1px solid black;
+    /* object-fit: scale-down; */
+}
+
+.grid-box img{
+    width: 180px;
+    height: 180px
+}

@@ -3,46 +3,70 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Tic Tac Toe - Cats Edition</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <main id="game">
-            <div id="opening-display"></div>
-            <div id="player-one-display"></div>
-            <div id="player-two-display"></div>
+        <main>
+            <div id="opening-display">
+                <div>
+                    <h1>Welcome to Tic Tac Toe</h1>
+                    <h3>CATS EDITION</h3>
+                    <h5>Instructions:</h5>
+                    <p>Players take turns selecting squares. First player to get three of their cats in a row wins! </p>
+                    <button id="start-button">Press to start</button>
+                </div>
+            </div>
+            <div id="player-one-display">
+                <div>
+                    <h1>Player One</h1>
+                    <p>Please Enter Your name</p>
+                    <input type="text" id="player-one-input">
+                    <button id="player-one-btn">Submit</button>
+                </div>
+            </div>
+            <div id="player-two-display">
+                <div>
+                    <h1>Player Two</h1>
+                    <p>Please Enter Your name</p>
+                    <input type="text" id="player-two-input">
+                    <button id="player-two-btn">Submit</button>
+                </div>
+            </div>
 
             <div id="container">
                 <header>
                     <h1>Tic Tac Toe</h1>
-                    <h2>Cats Edition</h2>
-                    <img src="#" alt="" id="cat-ref">
+                    <h3>Cats Edition</h2>
                 </header>
-                <div id="player-one-container">
-                    <img src="#" alt="" id="player-one-avatar">
-                    <h4 id="player-one-name">Player One</h4>
-                    <p id="player-one-score">Score: 0</p>
-                </div>
-                <div id="player-two-container">
-                    <img src="#" alt="" id="player-two-avatar">
-                    <h4 id="player-two-name">Player One</h4>
-                    <p id="player-two-score">Score: 0</p>
+                <div id="player-stats">
+                    <div id="player-one-container">
+                        <img src="#" alt="" id="player-one-avatar" width="100px" height="100px">
+                        <h4 id="player-one-name">Player One</h4>
+                        <p id="player-one-score">Score: 0</p>
+                    </div>
+                    <img src="" alt="" id="cat-ref">
+                    <div id="player-two-container">
+                        <img src="#" alt="" id="player-two-avatar" width="100px" height="100px">
+                        <h4 id="player-two-name">Player Two</h4>
+                        <p id="player-two-score">Score: 0</p>
+                    </div>
                 </div>
                 <div id="game-flow">
-                    <p>Its Player Ones Turn!</p>
+                    <p></p>
                 </div>
                 <div id="game-container">
-                    <div class="grid-box" id="grid-1"></div>
-                    <div class="grid-box" id="grid-2"></div>
-                    <div class="grid-box" id="grid-3"></div>
-                    <div class="grid-box" id="grid-4"></div>
-                    <div class="grid-box" id="grid-5"></div>
-                    <div class="grid-box" id="grid-6"></div>
-                    <div class="grid-box" id="grid-7"></div>
-                    <div class="grid-box" id="grid-8"></div>
-                    <div class="grid-box" id="grid-9"></div>
+                    <div class="grid-box" id="grid-1" data-cell-index="1"></div>
+                    <div class="grid-box" id="grid-2" data-cell-index="2"></div>
+                    <div class="grid-box" id="grid-3" data-cell-index="3"></div>
+                    <div class="grid-box" id="grid-4" data-cell-index="4"></div>
+                    <div class="grid-box" id="grid-5" data-cell-index="5"></div>
+                    <div class="grid-box" id="grid-6" data-cell-index="6"></div>
+                    <div class="grid-box" id="grid-7" data-cell-index="7"></div>
+                    <div class="grid-box" id="grid-8" data-cell-index="8"></div>
+                    <div class="grid-box" id="grid-9" data-cell-index="9"></div>
                 </div>
             </div>
         </main>
