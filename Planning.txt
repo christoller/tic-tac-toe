@@ -1,0 +1,10 @@
+Process:
+
+Open App
+Display shows game title overlay - press button to start
+New Display Asks for Player One Name, Input and Submit, close display
+New Display Asks for Player Two Name, Input and Submit, close display
+New Dispay shows game grid, players names and scores up top. Prompts Player One to start, highlights their Name
+When Player One clicks on a box, img is added to that box representing their move
+Player Two is prompted to make a move, Changes in DOM to represent their img, Highlights their name
+Game checks if player gets three in a row, if so then box pops ups to say they won - button to restart game, score updated
