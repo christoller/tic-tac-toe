@@ -21,6 +21,7 @@
             </div>
             <div id="player-one-display">
                 <div>
+                    <img src="#" alt="" id="player-one-display-img">
                     <h1>Player One</h1>
                     <p>Please Enter Your name</p>
                     <input type="text" id="player-one-input">
@@ -29,13 +30,13 @@
             </div>
             <div id="player-two-display">
                 <div>
+                    <img src="#" alt="" id="player-two-display-img">
                     <h1>Player Two</h1>
                     <p>Please Enter Your name</p>
                     <input type="text" id="player-two-input">
                     <button id="player-two-btn">Submit</button>
                 </div>
             </div>
-
             <div id="container">
                 <header>
                     <h1>Tic Tac Toe</h1>
@@ -43,19 +44,31 @@
                 </header>
                 <div id="player-stats">
                     <div id="player-one-container">
-                        <img src="#" alt="" id="player-one-avatar" width="100px" height="100px">
-                        <h4 id="player-one-name">Player One</h4>
-                        <p id="player-one-score">Score: 0</p>
+                        <div>
+                            <img src="#" alt="" id="player-one-avatar" width="100px" height="100px">
+                            <h4 id="player-one-name"></h4>
+                            <p id="player-one-score">Score: 0</p>
+                        </div>
                     </div>
                     <img src="" alt="" id="cat-ref">
                     <div id="player-two-container">
-                        <img src="#" alt="" id="player-two-avatar" width="100px" height="100px">
-                        <h4 id="player-two-name">Player Two</h4>
-                        <p id="player-two-score">Score: 0</p>
+                        <div>
+                            <img src="#" alt="" id="player-two-avatar" width="100px" height="100px">
+                            <h4 id="player-two-name"></h4>
+                            <p id="player-two-score">Score: 0</p>
+                        </div>
                     </div>
                 </div>
                 <div id="game-flow">
                     <p></p>
+                </div>
+                <div id="end-game-screen">
+                    <div id="end-game-container">
+                        <img src="#" alt="" id="end-game-img">
+                        <p id="end-game-header"></p>
+                        <p id="end-game-txt">Wanna Play Again?</p>
+                        <button id="end-game-button">Play Again</button>
+                    </div>
                 </div>
                 <div id="game-container">
                     <div class="grid-box" id="grid-1" data-cell-index="1"></div>
