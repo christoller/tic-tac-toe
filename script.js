@@ -40,6 +40,7 @@ const endGameScreen = document.getElementById('end-game-screen');
 const endGameHeader = document.getElementById('end-game-header');
 const endGameBtn = document.getElementById('end-game-button');
 const endGameImg = document.getElementById('end-game-img');
+const endGameClose = document.getElementById('end-game-close');
 const playerOneName = document.getElementById('player-one-name');
 const playerTwoName = document.getElementById('player-two-name');
 const playerOneInput = document.getElementById('player-one-input');
@@ -93,6 +94,10 @@ endGameBtn.addEventListener('click', () => {
     resetBoard();
     choosePlayerToStart();
     initializeGame();
+});
+
+endGameClose.addEventListener('click', () => {
+    endGameScreen.style.display = 'none';
 });
 
 for (let box of gridBox) {
@@ -230,6 +235,7 @@ function endGame(gameStatus) {
         }
     } else if (gameStatus === 'draw') {
         endGameScreen.style.display = 'contents';
+        endGameImg.src = '/images/catpeek.png';
         endGameHeader.innerHTML = `It's a Draw!`;
     }
 }
