@@ -7,14 +7,17 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Patrick+Hand&family=Permanent+Marker&display=swap" rel="stylesheet">
     </head>
     <body>
         <main>
             <div id="opening-display">
                 <div>
                     <h1>Tic Tac Toe</h1>
-                    <img src="./images/cat-avatars/cat-1.png" alt="" id="opening-cat-img">
-                    <h3>CATS EDITION</h3>
+                    <h3>Cats In Space Edition</h3>
+                    <img src="https://c.tenor.com/QkfORDyo0YEAAAAC/nyan-cat.gif" alt="" id="opening-cat-img">
                     <h5>Instructions:</h5>
                     <p>Players take turns selecting squares. First player to get three of their cats in a row wins! </p>
                     <button id="start-button">Press to start</button>
@@ -41,22 +44,29 @@
             <div id="container">
                 <header>
                     <h1>Tic Tac Toe</h1>
-                    <h3>Cats Edition</h2>
+                    <h3>Cats In Space Edition</h2>
                 </header>
                 <div id="player-stats">
                     <div id="player-one-container">
                         <div>
                             <img src="#" alt="" id="player-one-avatar" width="100px" height="100px">
-                            <h4 id="player-one-name"></h4>
-                            <p id="player-one-score">Score: 0</p>
+                            <img src="./images/catpost.png" alt="" class="cat-post" width="100px" height="100px">
+                            <div class="scorebox">
+                                <h4 id="player-one-name"></h4>
+                                <p id="player-one-score">Score: 0</p>
+                            </div>
                         </div>
                     </div>
                     <img src="" alt="" id="cat-ref">
                     <div id="player-two-container">
                         <div>
-                            <img src="#" alt="" id="player-two-avatar" width="100px" height="100px">
-                            <h4 id="player-two-name"></h4>
-                            <p id="player-two-score">Score: 0</p>
+                            <img src="#" alt="" id="player-two-avatar" width="150px" height="150px">
+                            <img src="./images/catpost.png" alt="" class="cat-post" width="100px" height="100px">
+                            <div class="scorebox">
+                                <h4 id="player-two-name"></h4>
+                                <p id="player-two-score">Score: 0</p>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -68,7 +78,6 @@
                         <p id="end-game-close">x</p>
                         <img src="#" alt="" id="end-game-img">
                         <p id="end-game-header"></p>
-                        <p id="end-game-txt">Wanna Play Again?</p>
                         <button id="end-game-button">Play Again</button>
                     </div>
                 </div>

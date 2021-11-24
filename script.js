@@ -62,6 +62,7 @@ const gridBox = document.getElementsByClassName('grid-box');
 
 startBtn.addEventListener('click', () => {
     openingDisplay.style.display = 'none';
+    playerOneDisplay.style.display = 'block';
     playerOneInput.focus();
     playerOneDisplayImg.src = players.playerOne.avatar;
     playerTwoDisplayImg.src = players.playerTwo.avatar;
@@ -74,6 +75,7 @@ playerOneBtn.addEventListener('click', () => {
         players.playerOne.username = playerOneInput.value;
         playerOneDisplay.style.display = 'none';
         playerOneName.textContent = players.playerOne.username;
+        playerTwoDisplay.style.display = 'block';
         playerTwoInput.focus();
     }
 });
@@ -168,11 +170,11 @@ function initializeGame() {
     if (playerTurn == players.playerOne) {
         playerTurn = players.playerTwo;
         catRef_img.src = '/images/cat-flipped/cat-point-right.png';
-        gameFlow.textContent = `${playerTwoName.innerHTML} Starts First! Click on a square to make your move`;
+        gameFlow.textContent = `${playerTwoName.innerHTML} Starts First. Pick a square!`;
     } else if (playerTurn == players.playerTwo) {
         playerTurn = players.playerOne;
         catRef_img.src = '/images/cat-flipped/cat-point-left.png';
-        gameFlow.textContent = `${playerOneName.innerHTML} Starts First. Click on a square to make your move`;
+        gameFlow.textContent = `${playerOneName.innerHTML} Starts First. Pick a square!`;
     }
 }
 
@@ -214,7 +216,7 @@ function checkForWin() {
             gameFlow.textContent = `${playerTurn.username} Wins!`;
             gameWon = true;
             endGame('win');
-        } else if (turns === 9) {
+        } else if (turns === 9 && gameWon === false) {
             endGame('draw');
             gameFlow.textContent = `It's a Draw!`;
         }
@@ -227,15 +229,15 @@ function endGame(gameStatus) {
         endGameImg.src = playerTurn.avatar;
         endGameHeader.innerHTML = `${playerTurn.username} Wins!`;
         playerTurn.score++;
-        playerOneScore.innerText = players.playerOne.score;
-        playerTwoScore.innerText = players.playerTwo.score;
+        playerOneScore.innerText = `Score: ${players.playerOne.score}`;
+        playerTwoScore.innerText = `Score: ${players.playerTwo.score}`;
 
         for (let box of gridBox) {
             box.style.pointerEvents = 'none';
         }
     } else if (gameStatus === 'draw') {
         endGameScreen.style.display = 'contents';
-        endGameImg.src = '/images/catpeek.png';
+        endGameImg.src = 'https://c.tenor.com/QkfORDyo0YEAAAAC/nyan-cat.gif';
         endGameHeader.innerHTML = `It's a Draw!`;
     }
 }
