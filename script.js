@@ -1,15 +1,15 @@
 const catImageArray = [
-    '/images/cat-avatars/cat-1.png',
-    '/images/cat-avatars/cat-2.png',
-    '/images/cat-avatars/cat-3.png',
-    '/images/cat-avatars/cat-4.png',
-    '/images/cat-avatars/cat-5.png',
-    '/images/cat-avatars/cat-6.png',
-    '/images/cat-avatars/cat-7.png',
-    '/images/cat-avatars/cat-8.png',
-    '/images/cat-avatars/cat-9.png',
-    '/images/cat-avatars/cat-10.png',
-    '/images/cat-avatars/cat-11.png',
+    './images/cat-avatars/cat-1.png',
+    './images/cat-avatars/cat-2.png',
+    './images/cat-avatars/cat-3.png',
+    './images/cat-avatars/cat-4.png',
+    './images/cat-avatars/cat-5.png',
+    './images/cat-avatars/cat-6.png',
+    './images/cat-avatars/cat-7.png',
+    './images/cat-avatars/cat-8.png',
+    './images/cat-avatars/cat-9.png',
+    './images/cat-avatars/cat-10.png',
+    './images/cat-avatars/cat-11.png',
 ];
 
 const players = {
@@ -55,6 +55,7 @@ const playerTwoAvatar_img = document.getElementById('player-two-avatar');
 const gameFlow = document.getElementById('game-flow');
 const catRef_img = document.getElementById('cat-ref');
 const gridBox = document.getElementsByClassName('grid-box');
+const footer = document.querySelector('footer');
 
 // ************* ********* ************* //
 // ********** Event Listeners ********** //
@@ -87,6 +88,7 @@ playerTwoBtn.addEventListener('click', () => {
         playerTwoDisplay.style.display = 'none';
         playerTwoName.textContent = players.playerTwo.username;
         container.style.display = 'contents';
+        footer.style.visibility = 'visible';
         choosePlayerToStart();
         initializeGame();
     }
@@ -169,11 +171,11 @@ function initializeGame() {
 
     if (playerTurn == players.playerOne) {
         playerTurn = players.playerTwo;
-        catRef_img.src = '/images/cat-flipped/cat-point-right.png';
+        catRef_img.src = './images/cat-flipped/cat-point-right.png';
         gameFlow.textContent = `${playerTwoName.innerHTML} Starts First. Pick a square!`;
     } else if (playerTurn == players.playerTwo) {
         playerTurn = players.playerOne;
-        catRef_img.src = '/images/cat-flipped/cat-point-left.png';
+        catRef_img.src = './images/cat-flipped/cat-point-left.png';
         gameFlow.textContent = `${playerOneName.innerHTML} Starts First. Pick a square!`;
     }
 }
@@ -193,11 +195,11 @@ function initializePlayerTurn() {
     if (gameWon === false) {
         if (playerTurn == players.playerOne) {
             playerTurn = players.playerTwo;
-            catRef_img.src = '/images/cat-flipped/cat-point-right.png';
+            catRef_img.src = './images/cat-flipped/cat-point-right.png';
             gameFlow.textContent = `It's ${players.playerTwo.username}'s turn!`;
         } else if (playerTurn == players.playerTwo) {
             playerTurn = players.playerOne;
-            catRef_img.src = '/images/cat-flipped/cat-point-left.png';
+            catRef_img.src = './images/cat-flipped/cat-point-left.png';
             gameFlow.textContent = `It's ${players.playerOne.username}'s turn!`;
         }
     }
