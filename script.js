@@ -49,6 +49,7 @@ const playerTwoInput = document.getElementById('player-two-input');
 const playerTwoBtn = document.getElementById('player-two-btn');
 const playerOneScore = document.getElementById('player-one-score');
 const playerTwoScore = document.getElementById('player-two-score');
+const roundCounterTxt = document.getElementById('round-counter-txt');
 const container = document.getElementById('container');
 const playerOneAvatar_img = document.getElementById('player-one-avatar');
 const playerTwoAvatar_img = document.getElementById('player-two-avatar');
@@ -56,6 +57,7 @@ const gameFlow = document.getElementById('game-flow');
 const catRef_img = document.getElementById('cat-ref');
 const gridBox = document.getElementsByClassName('grid-box');
 const footer = document.querySelector('footer');
+const resetBtn = document.getElementById('reset-btn');
 
 // ************* ********* ************* //
 // ********** Event Listeners ********** //
@@ -122,6 +124,9 @@ for (let box of gridBox) {
         initializePlayerTurn();
     });
 }
+resetBtn.addEventListener('click', () => {
+    location.reload();
+});
 
 // ************* ********* ************* //
 // ********** Game Variables *********** //
@@ -132,6 +137,7 @@ playerOneAvatar_img.src = players.playerOne.avatar;
 playerTwoAvatar_img.src = players.playerTwo.avatar;
 
 let turns = 0;
+let round = 1;
 let gameBoard = ['', '', '', '', '', '', '', '', ''];
 const winningCombinations = [
     [0, 1, 2],
@@ -143,6 +149,7 @@ const winningCombinations = [
     [0, 4, 8],
     [2, 4, 6],
 ];
+
 let gameWon = false;
 let playerTurn;
 
@@ -249,6 +256,8 @@ function resetBoard() {
     gameBoard = ['', '', '', '', '', '', '', '', ''];
     turns = 0;
     gameWon = false;
+    round++;
+    roundCounterTxt.innerText = `Round ${round}`;
 
     for (let box of gridBox) {
         if (box.hasChildNodes()) {
