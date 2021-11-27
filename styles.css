@@ -410,7 +410,7 @@ header h3 {
 #player-one-avatar {
     position: absolute;
     z-index: 3;
-    top: -60px;
+    top: -65px;
     left: 15px;
     padding: 10%;
     width: 150px;
@@ -444,7 +444,7 @@ header h3 {
 #player-two-avatar {
     position: absolute;
     z-index: 3;
-    top: -60px;
+    top: -65px;
     left: 15px;
     padding: 10%;
     width: 150px;
