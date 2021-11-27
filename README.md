@@ -18,7 +18,7 @@ To begin: Each player enters their name, and their avatar will be randomly chose
 
 ### HTML/CSS :
 
-I designed the game board using CSS Grid and created seperate containers for the start screen and player name screens that would be shown or hidden as needed. I used CSS animation to give some elements a “floating” effect to lend towards the space theme. For each box in my grid I gave a data cell index number as a way to reference each box in the javascript .
+I designed the game board using CSS Grid and created seperate containers for the start screen and player name screens that would be shown or hidden as needed. I used CSS animation to give some elements a “floating” effect to lend towards the space theme. For each box in my grid I gave a data cell index number as a way to reference each box in javascript.
 
 ### Javascript:
 
@@ -51,4 +51,4 @@ The plan was for the box displaying the round number to be floating all the way 
 
 The game is not built with responsive design, and is not suitable for smaller or extra large screens. This is a feature I would like to eventually implement.
 
-Would like to add sound effects and time limits
+Would like to add sound effects and time limits.
