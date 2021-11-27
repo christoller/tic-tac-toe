@@ -52,3 +52,5 @@ The plan was for the box displaying the round number to be floating all the way 
 The game is not built with responsive design, and is not suitable for smaller or extra large screens. This is a feature I would like to eventually implement.
 
 Would like to add sound effects and time limits.
+
+Haven't yet added button event listeners for the enter key. Currently can only click on the buttons.
