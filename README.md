@@ -10,9 +10,9 @@ To begin: Each player enters their name, and their avatar will be randomly chose
 
 ## Technologies Used
 
-— HTML
-— CSS
-— Javascript
+..* HTML
+..* CSS
+..* Javascript
 
 ## Approach Taken
 
