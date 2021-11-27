@@ -1,6 +1,7 @@
 :root {
     font-size: 1.2em;
 }
+
 * {
     box-sizing: border-box;
 }
@@ -10,7 +11,6 @@
 body {
     font-family: 'Indie Flower', cursive;
     color: rgb(255, 255, 255);
-    /* background-color: rgb(107 30 115); */
     background-image: url('./images/5558636.jpg');
     background-size:cover;
 }
@@ -272,45 +272,66 @@ header h3 {
     display: flex;
     justify-content: center;
     gap: 80px;
+    animation: float 6s ease-in-out infinite;
 }
 #cat-ref {
     width: 120px;
     height: auto;
+    /* animation: float 6s ease-in-out infinite; */
 }
-#round-counter {
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+.round-counter {
     animation-duration: 10s;
     animation-name: slide;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     position: absolute;
     z-index: -1;
-    right: 0%;
+
+}
+#round-counter-1{
+    right: 5%;
+    top: 70%;
+}
+#round-counter-2{
+    left: 0%;
     top: 70%;
 }
 @keyframes slide {
-    from {
-        right: 0;
-        top: 0;
-        width: 120px;
+    0% {
+        transform: translate(50px, 0px);    
     }
-
-    to {
-        right: 0;
-        bottom: 0;
-        width: 120px;
+    50% {
+        transform: translate(20px, 40px);
+    }
+    100% {
+        transform: translate(60px, 60px);
     }
 }
-#round-counter img {
+.round-counter img {
     width: 120px;
     height: auto;
+    opacity: .7;
 }
-#round-counter div {
-    margin-top: -10px;
+.round-counter div {
+    margin-top: -9px;
     height: 50px;
-    background-color: rgb(255, 149, 0);
+    background-color: rgba(255, 149, 0, 0.7);
     text-align: center;
 }
-#round-counter-txt {
+.round-counter-txt {
      margin: 0;
      color: black;
      padding-top: 10px;

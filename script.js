@@ -49,7 +49,8 @@ const playerTwoInput = document.getElementById('player-two-input');
 const playerTwoBtn = document.getElementById('player-two-btn');
 const playerOneScore = document.getElementById('player-one-score');
 const playerTwoScore = document.getElementById('player-two-score');
-const roundCounterTxt = document.getElementById('round-counter-txt');
+const roundCounterTxt_1 = document.getElementById('round-txt-1');
+const roundCounterTxt_2 = document.getElementById('round-txt-2');
 const container = document.getElementById('container');
 const playerOneAvatar_img = document.getElementById('player-one-avatar');
 const playerTwoAvatar_img = document.getElementById('player-two-avatar');
@@ -174,8 +175,6 @@ function generateAvatar() {
 }
 
 function initializeGame() {
-    catRef_img.src = '/images/cat-flipped/cat-point-left.png';
-
     if (playerTurn == players.playerOne) {
         playerTurn = players.playerTwo;
         catRef_img.src = './images/cat-flipped/cat-point-right.png';
@@ -257,7 +256,8 @@ function resetBoard() {
     turns = 0;
     gameWon = false;
     round++;
-    roundCounterTxt.innerText = `Round ${round}`;
+    roundCounterTxt_1.textContent = `Round ${round}`;
+    roundCounterTxt_2.textContent = `Round ${round}`;
 
     for (let box of gridBox) {
         if (box.hasChildNodes()) {
